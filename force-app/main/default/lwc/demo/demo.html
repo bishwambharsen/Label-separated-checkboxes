@@ -1,20 +1,15 @@
 <template>
-  <lightning-card
-    title="Label separated checkboxes"
-    icon-name="standard:account"
-  >
-    <lightning-layout multiple-rows="true">
-      <template for:each={countries} for:item="country">
-        <lightning-layout-item size="12" key={country.name}>
-          <lightning-formatted-text
-            value={country.name}
-          ></lightning-formatted-text>
-        </lightning-layout-item>
-        <template for:each={country.states} for:item="state">
-          <lightning-layout-item size="12" key={state}>
-            <lightning-input type="checkbox" label={state}></lightning-input>
-          </lightning-layout-item>
-        </template>
+    <lightning-card title="Label separated checkboxes" icon-name="standard:account">
+        <lightning-layout multiple-rows="true">
+            <template for:each={countries} for:item="country">
+                <lightning-layout-item size="12" key={country.name}>
+                    <lightning-formatted-text value={country.name}></lightning-formatted-text>
+                </lightning-layout-item>
+                <template for:each={country.states} for:item="state">
+                    <lightning-layout-item size="12" key={state}>
+                        <lightning-input type="checkbox" label={state}></lightning-input>
+                    </lightning-layout-item>
+                </template>
 </template>
 </lightning-layout>
 </lightning-card>
